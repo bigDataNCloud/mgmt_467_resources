@@ -66,6 +66,56 @@ How should a maritime operator **prioritize limited staff attention** during an 
 
 ---
 
-## GitHub Deliverables (both datasets)
+## Rubric (100 + up to 10 EC) — Classification-only
 
-### Recommended repo layout (classification-only)
+### Individual (60)
+- Baseline or engineered model build + clear metrics (AUC/log_loss) — **15**  
+- Confusion matrix interpretation (default 0.5) — **15**  
+- Threshold rationale (0.75 or other; cost-aware or top-K) — **10**  
+- TRANSFORM engineering + before/after comparison (where applicable) — **15**  
+- Reproducibility (clear cells, params, no hidden magic) — **5**
+
+### Team (40)
+- Ops Brief clarity (exec-ready; risks & mitigations; decision rule) — **20**  
+- Repository hygiene & repeatability (layout, SQLs, run steps) — **10**  
+- Model governance notes (assumptions, limitations, monitoring plan) — **10**
+
+### Extra Credit (up to +10)
+- Additional model variant (e.g., different bucketing/interaction or a calibrated thresholding method) with rigorous comparison — **+5**  
+- Sensitivity analysis (cost-based FP/FN optimization or threshold sweep with fairness bands) — **+5**
+
+---
+
+## Quick assignment tips (students)
+- Keep each notebook focused: **one model per student**, 1–2 clean figures/tables, short prose.  
+- Make your **assumptions explicit** (costs, capacity cap, segment choice).  
+- Post-deployment: commit to **what you will monitor** and **who owns it**.
+
+### Team Ops Brief (2–3 pages, PDF)
+- **Decision rule (one line):** what you are optimizing (risk vs speed/capacity) and the **operating threshold** you chose.  
+- **Evidence:** baseline → engineered → segment results; show key metrics (AUC, log_loss, confusion).  
+- **Policy:** global vs segmented deployment; **expected-cost analysis** (your cost matrix); **fairness observation** (Titanic) or **hub precision** (Flights).  
+- **Monitoring:** metric + threshold + cadence + owner (e.g., weekly calibration error; precision on top hubs; parity gaps < 5 pp).
+
+---
+
+# Recommended Repo Structure
+
+
+Unit2_<Dataset>_TeamX/
+├── individual/
+│   ├── Unit2_Alice_BQML.ipynb      # one model per student (A/B/C/D)
+│   ├── Unit2_Bob_BQML.ipynb
+│   ├── Unit2_Charlie_BQML.ipynb
+│   └── Unit2_Dana_BQML.ipynb
+├── team/
+│   ├── Ops_Brief.pdf               # 2–3 pages: policy, threshold, risks, monitoring
+│   └── README.md                   # how to run, dataset choice, assumptions
+
+
+
+
+
+
+
+
