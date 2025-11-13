@@ -19,7 +19,7 @@
 #        "bucket":"mgmt-467-47888-opensky",
 #        "path":"opensky-data",
 #        "projectId":"mgmt-467-47888",
-#        "separateLines":true
+#        "separateLines":true,
 #        "name": "Developer"
 #   }
 # Use the following tests from the Cloud Function UI:
