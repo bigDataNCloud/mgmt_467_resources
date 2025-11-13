@@ -13,6 +13,15 @@
 #      export PYTHONPATH=~/classResources/python
 #   )
 #   python ~/classResources/python/flight/stream/main_flight-streaming.py -log -storage
+#   Write to Google Storage:
+#   {
+#        "storage":true,
+#        "bucket":"prof-big-data_data",
+#        "path":"flight-streaming-demo",
+#        "projectId":"prof-big-data",
+#        "separateLines":true
+#        "name": "Developer"
+#   }
 # Use the following tests from the Cloud Function UI:
 #   Write to Google Storage and publish to a Pub/Sub queue simultaneously:
 #   {
@@ -23,6 +32,7 @@
 #        "topic":"flight-streaming-demo-topic",
 #        "projectId":"prof-big-data",
 #        "separateLines":true
+#        "name": "Developer"
 #   }
 #   If you only want to publish messages to Pub/Sub and want to specify a topic and project:
 #      {
@@ -31,6 +41,7 @@
 #        "projectId":"prof-big-data",
 #        "separateLines":"true",
 #        "limit":30
+#        "name": "Developer"
 #      }
 #   If you only want to write to GCS and want to specify a bucket and path.
 #      {"storage":true,"bucket":"prof-big-data_data","path":"flight-streaming","separateLines":true,"limit":10}
