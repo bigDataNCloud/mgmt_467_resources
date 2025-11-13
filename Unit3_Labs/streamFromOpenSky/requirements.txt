@@ -1,5 +1,10 @@
+# GCP Libraries
 google-cloud-storage
 google-cloud-pubsub
 google-oauth2
+
+# 2nd Gen Requirement
 functions-framework
+
+# OpenSky API Requirement
 requests
