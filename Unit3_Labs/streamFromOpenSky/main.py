@@ -16,9 +16,9 @@
 #   Write to Google Storage:
 #   {
 #        "storage":true,
-#        "bucket":"prof-big-data_data",
-#        "path":"flight-streaming-demo",
-#        "projectId":"prof-big-data",
+#        "bucket":"mgmt-467-47888-opensky",
+#        "path":"opensky-data",
+#        "projectId":"mgmt-467-47888",
 #        "separateLines":true
 #        "name": "Developer"
 #   }
